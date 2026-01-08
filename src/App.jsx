@@ -6,7 +6,7 @@ import Navbar from "./Components/Navbar"
 function App() {
  
   return (    
-    <div className="min-h-screen w-full bg-gray-700 font-inter text-white">
+    <div className="min-h-screen w-full bg-gray-900 font-inter text-white">
       
       <Navbar />
       <MainRouter />

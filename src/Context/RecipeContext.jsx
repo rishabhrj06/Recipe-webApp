@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createContext } from 'react';
 
+
 export const recipeContext = createContext(null);
 
 const RecipeContext = (props) => {
@@ -36,9 +37,15 @@ const RecipeContext = (props) => {
           category:"Snacks"
         }
   ]);
+
+  const deleteRecipe = (id) => {
+    console.log("Deleting recipe with id:", id);
+      setData(prev => prev.filter(recipe => recipe.id !== id));
+  }
+
   console.log(data);
   return (
-    <recipeContext.Provider value={{data, setData}}>
+    <recipeContext.Provider value={{data, setData, deleteRecipe}}>
       {props.children}
     </recipeContext.Provider> 
   )

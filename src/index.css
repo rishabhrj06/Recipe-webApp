@@ -4,3 +4,12 @@
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.animate-gradient {
+  animation : animationGradient 2.5s linear infinite;
+}
+
+@keyframes animationGradient {
+  to{
+    background-position: 200%;
+  }
+}

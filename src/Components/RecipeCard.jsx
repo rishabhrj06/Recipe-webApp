@@ -2,6 +2,7 @@ import React, { use } from 'react'
 import { recipeContext } from '../Context/RecipeContext'
 import { Link } from 'react-router-dom';
 
+
 const RecipeCard = (props) => {
 
   const {image, title, chefName, category, ingredients, instructions, id} = props.data;
@@ -9,7 +10,8 @@ const RecipeCard = (props) => {
   
   return (
     
-    <Link to={`/recipe/${id}`} className='flex h-full w-full'>
+    <Link to={`/recipe/details/${id}`} className='flex h-full w-full'>
+          
    <div className=' h-full w-1/3' >
       <small className='text-center ml-3 font-medium text-gray-400 h-[10%]'>~  {chefName}</small>
       
